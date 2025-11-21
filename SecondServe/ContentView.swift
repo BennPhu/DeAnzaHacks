@@ -9,13 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("New Food Alert!")
-        }
-        .padding()
+        
+        Image("foodBanana").resizable().aspectRatio(contentMode: .fit).cornerRadius(25).padding()
+        
+        Text("Banana")
     }
 }
 
