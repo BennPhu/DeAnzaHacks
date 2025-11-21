@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  Dashboard.swift
 //  SecondServe
 //
 //  Created by Marc Rodenas Guasch on 21/11/25.
@@ -7,15 +7,13 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct Dashboard: View {
     var body: some View {
-        
-        Image("foodBanana").resizable().aspectRatio(contentMode: .fit).cornerRadius(25).padding()
-        
-        Text("Banana")
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 #Preview {
-    ContentView()
+    Dashboard()
 }
+
