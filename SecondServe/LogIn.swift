@@ -13,7 +13,7 @@ struct SwiftUIView: View {
     var body: some View {
         // Informative Text
         Text("Second Serve")
-            .offset(x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: -200.0)
+            .offset(x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: -140.0)
             .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
         Text("Sign into account")
             .offset(x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: -20)
