@@ -124,6 +124,7 @@ struct Dashboard: View {
     }
 }
 
+
 // MARK: - Card View
 struct CardView: View {
     let title: String
