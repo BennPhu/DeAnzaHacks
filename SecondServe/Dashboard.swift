@@ -8,22 +8,28 @@
 import SwiftUI
 
 struct Dashboard: View {
+    @State private var searchFood = ""
+    
     var body: some View {
-        
-        ZStack {
-            Color(.gray).ignoresSafeArea()
-            
-            Image("foodBanana")
-                .resizable()
-                .cornerRadius(25)
-                .aspectRatio(contentMode:.fit)
-                .padding()
-            Text("Banana")
-                .font(.largeTitle)
-                .fontWeight(.semibold)
-                .foregroundColor(.white)
+        ScrollView {
+            VStack(spacing: 20) {
+
+                // Search Bar
+                TextField("Search", text: $searchFood)
+                    .textFieldStyle(.roundedBorder)
+                    .padding(.horizontal)
+                    .frame(width: 360, height: 47)
+
+                // Banner
+                Image("PearBanner")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 330, height: 100)
+                    .clipped()
+                    .cornerRadius(12)
+            }
+            .padding(.top, 24)
         }
-        
     }
 }
 
