@@ -7,15 +7,16 @@ struct ItemDetailView: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 16) {
-                RoundedRectangle(cornerRadius: 16, style: .continuous)
-                    .fill(Color(.secondarySystemBackground))
-                    .frame(height: 220)
-                    .overlay(
-                        Image(systemName: "photo.on.rectangle")
-                            .font(.largeTitle)
-                            .foregroundColor(.secondary)
-                    )
+				VStack(alignment: .leading, spacing: 16) {
+					if item.allImageSources.isEmpty {
+						ItemImageView(source: nil)
+							.frame(height: 220)
+							.clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+					} else {
+						ItemImageCarousel(sources: item.allImageSources)
+							.frame(height: 220)
+							.clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+					}
 
                 HStack {
                     Text(item.name)
@@ -78,6 +79,20 @@ struct ItemDetailView: View {
         formatter.dateStyle = .medium
         return formatter.string(from: date)
     }
+}
+private struct ItemImageCarousel: View {
+	let sources: [ItemImageSource]
+
+	var body: some View {
+		TabView {
+			ForEach(Array(sources.enumerated()), id: \.offset) { _, source in
+				ItemImageView(source: source)
+					.frame(maxWidth: .infinity, maxHeight: .infinity)
+					.background(Color(.secondarySystemBackground))
+			}
+		}
+		.tabViewStyle(.page(indexDisplayMode: .automatic))
+	}
 }
 
 private struct DetailRow: View {

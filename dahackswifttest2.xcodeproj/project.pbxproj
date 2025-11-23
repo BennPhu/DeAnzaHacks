@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33460CC02ED264DA00D5EB74 /* ItemImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33460CBF2ED264D000D5EB74 /* ItemImageView.swift */; };
+		33460CC22ED26A4D00D5EB74 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33460CC12ED26A4800D5EB74 /* AppColors.swift */; };
 		33875A012ED1C979000FD729 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33875A002ED1C979000FD729 /* Assets.xcassets */; };
 		33875A142ED1C98C000FD729 /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33875A0C2ED1C98C000FD729 /* ItemDetailView.swift */; };
 		33875A152ED1C98C000FD729 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33875A072ED1C98C000FD729 /* AddItemView.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33460CBF2ED264D000D5EB74 /* ItemImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemImageView.swift; sourceTree = "<group>"; };
+		33460CC12ED26A4800D5EB74 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		338759F92ED1C978000FD729 /* dahackswifttest2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dahackswifttest2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33875A002ED1C979000FD729 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33875A072ED1C98C000FD729 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
@@ -59,12 +63,14 @@
 			children = (
 				33875A222ED21A60000FD729 /* dahackswifttest2-Info.plist */,
 				33875A072ED1C98C000FD729 /* AddItemView.swift */,
+				33460CC12ED26A4800D5EB74 /* AppColors.swift */,
 				33875A082ED1C98C000FD729 /* CartView.swift */,
 				33875A092ED1C98C000FD729 /* ContentView.swift */,
 				33875A212ED1C98D000FD729 /* dahackswifttest2-Bridging-Header.h */,
 				33875A0A2ED1C98C000FD729 /* HomeView.swift */,
 				33875A0B2ED1C98C000FD729 /* ImagePicker.swift */,
 				33875A0C2ED1C98C000FD729 /* ItemDetailView.swift */,
+				33460CBF2ED264D000D5EB74 /* ItemImageView.swift */,
 				33875A0D2ED1C98C000FD729 /* MenuView.swift */,
 				33875A0E2ED1C98C000FD729 /* Models.swift */,
 				33875A0F2ED1C98C000FD729 /* ProfileView.swift */,
@@ -161,6 +167,7 @@
 				33875A142ED1C98C000FD729 /* ItemDetailView.swift in Sources */,
 				33875A152ED1C98C000FD729 /* AddItemView.swift in Sources */,
 				33875A162ED1C98C000FD729 /* ImagePicker.swift in Sources */,
+				33460CC22ED26A4D00D5EB74 /* AppColors.swift in Sources */,
 				33875A172ED1C98C000FD729 /* TabRouter.swift in Sources */,
 				33875A182ED1C98C000FD729 /* CartView.swift in Sources */,
 				33875A192ED1C98C000FD729 /* SampleData.swift in Sources */,
@@ -171,6 +178,7 @@
 				33875A1E2ED1C98C000FD729 /* ContentView.swift in Sources */,
 				33875A1F2ED1C98C000FD729 /* ProfileView.swift in Sources */,
 				33875A202ED1C98C000FD729 /* MenuView.swift in Sources */,
+				33460CC02ED264DA00D5EB74 /* ItemImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

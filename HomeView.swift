@@ -23,8 +23,9 @@ struct HomeView: View {
                 Spacer()
                 Text("Second Serve")
                     .font(.headline)
+					.foregroundColor(.appCharcoal)
                 Spacer()
-                Spacer().frame(width: 24)
+                Spacer().frame(width: 27)
             }
             .padding(.horizontal)
 
@@ -52,6 +53,7 @@ struct HomeView: View {
                 .padding(.horizontal)
                 .padding(.bottom, 8)
         }
+		.background(Color.appCream.ignoresSafeArea())
         .sheet(isPresented: $showingCart) {
             NavigationStack {
                 CartView()
@@ -84,11 +86,12 @@ struct HomeView: View {
         HStack(spacing: 12) {
             HStack {
                 Image(systemName: "magnifyingglass")
+					.foregroundColor(.appCharcoal)
                 TextField("Search food or type", text: $searchText)
                     .textInputAutocapitalization(.never)
             }
             .padding()
-            .background(Color(.secondarySystemBackground))
+			.background(Color.white.opacity(0.9))
             .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
 
             Button {
@@ -99,7 +102,7 @@ struct HomeView: View {
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity)
                     .padding()
-                    .background(Color.accentColor)
+					.background(Color.appPrimary)
                     .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
             }
             .frame(width: 70)
@@ -108,22 +111,51 @@ struct HomeView: View {
 }
 
 private struct BannerView: View {
+	private let bannerImageURLString = "https://hungerathome.org/wp-content/uploads/2024/08/hunger-at-home.png" // Replace with your banner image URL
+
+		private var bannerImageURL: URL? {
+			URL(string: bannerImageURLString)
+		}
+
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 4) {
                 Text("Save food, save money.")
                     .font(.headline)
+					.foregroundColor(.appCharcoal)
                 Text("Discover surplus meals nearby.")
                     .font(.subheadline)
-                    .foregroundColor(.secondary)
+					.foregroundColor(.appCharcoal.opacity(0.8))
             }
             Spacer()
-            Image(systemName: "leaf.fill")
-                .foregroundColor(.green)
-                .font(.title2)
+			if let bannerImageURL {
+				AsyncImage(url: bannerImageURL) { phase in
+					switch phase {
+					case .empty:
+						ProgressView()
+					case .success(let image):
+						image
+							.resizable()
+							.scaledToFit()
+							.frame(width: 80, height: 80)
+					case .failure:
+						Image(systemName: "photo")
+							.resizable()
+							.scaledToFit()
+							.frame(width: 60, height: 60)
+							.foregroundColor(.appPrimary)
+					@unknown default:
+						EmptyView()
+					}
+				}
+			} else {
+				Image(systemName: "leaf.fill")
+					.foregroundColor(.appPrimary)
+					.font(.title2)
+			}
         }
         .padding()
-        .background(Color(.tertiarySystemFill))
+		.background(Color.appAccentGreen.opacity(0.4))
         .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
     }
 }
@@ -133,29 +165,25 @@ private struct ItemCardView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            ZStack {
-                RoundedRectangle(cornerRadius: 12, style: .continuous)
-                    .fill(Color(.secondarySystemBackground))
-                    .frame(height: 120)
-                Image(systemName: "photo")
-                    .font(.largeTitle)
-                    .foregroundColor(.secondary)
-            }
-
+			ItemImageView(source: item.allImageSources.first)
+				.frame(height: 120)
+				.clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
             Text(item.name)
                 .font(.headline)
+				.foregroundColor(.appCharcoal)
+
 
             HStack {
                 Text(item.donation ? "Donate" : "Sell")
                     .font(.caption)
                     .padding(.horizontal, 10)
                     .padding(.vertical, 4)
-                    .background(item.donation ? Color.green.opacity(0.15) : Color.blue.opacity(0.15))
+					.background(item.donation ? Color.appAccentGreen.opacity(0.7) : Color.appPrimary.opacity(0.1))
                     .clipShape(Capsule())
                 Spacer()
                 Text(expiryText)
                     .font(.caption)
-                    .foregroundColor(.secondary)
+					.foregroundColor(.appCharcoal)
             }
 
             HStack {
@@ -167,14 +195,14 @@ private struct ItemCardView: View {
                     Text("Unsealed")
                         .font(.caption2)
                         .padding(6)
-                        .background(Color.red.opacity(0.15))
+						.background(Color.appTomato.opacity(0.15))
                         .clipShape(Capsule())
                 }
                 if item.status == .pendingApproval {
                     Text("Pending")
                         .font(.caption2)
                         .padding(6)
-                        .background(Color.orange.opacity(0.2))
+						.background(Color.appTomato.opacity(0.2))
                         .clipShape(Capsule())
                 }
             }

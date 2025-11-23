@@ -47,11 +47,32 @@ struct Item: Identifiable, Hashable {
     var sealed: Bool
     var expiryDate: Date
     var description: String
+	var photoData: [Data]?
     var photoURLs: [URL]?
     var priceUSD: Double?
     var locationText: String
     var status: ItemStatus
     var createdAt: Date
+}
+extension Item {
+	var primaryPhotoData: Data? {
+		photoData?.first
+	}
+
+	var primaryPhotoURL: URL? {
+		photoURLs?.first
+	}
+
+	var allImageSources: [ItemImageSource] {
+		let dataSources = (photoData ?? []).map { ItemImageSource.data($0) }
+		let urlSources = (photoURLs ?? []).map { ItemImageSource.url($0) }
+		return dataSources + urlSources
+	}
+}
+
+enum ItemImageSource: Hashable {
+	case data(Data)
+	case url(URL)
 }
 
 struct CartItem: Identifiable {

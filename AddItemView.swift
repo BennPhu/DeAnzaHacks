@@ -41,6 +41,22 @@ struct AddItemView: View {
                     Label("Take photo", systemImage: "camera")
                 }
                 if !selectedImages.isEmpty {
+					ScrollView(.horizontal, showsIndicators: false) {
+						HStack(spacing: 8) {
+							ForEach(Array(selectedImages.enumerated()), id: \.offset) { _, image in
+								Image(uiImage: image)
+									.resizable()
+									.scaledToFill()
+									.frame(width: 64, height: 64)
+									.clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+									.overlay(
+										RoundedRectangle(cornerRadius: 8, style: .continuous)
+											.stroke(Color.primary.opacity(0.1), lineWidth: 1)
+									)
+							}
+						}
+					}
+					.frame(height: 72)
                     Text("\(selectedImages.count) photo(s) attached")
                         .font(.footnote)
                         .foregroundColor(.secondary)
@@ -52,7 +68,7 @@ struct AddItemView: View {
                 Toggle("Item is sealed/closed", isOn: $sealed)
                 if !sealed {
                     Label("Unsealed items cannot be donated.", systemImage: "exclamationmark.triangle.fill")
-                        .foregroundColor(.orange)
+						.foregroundColor(.appTomato)
                         .font(.footnote)
                 }
             }
@@ -81,8 +97,8 @@ struct AddItemView: View {
                 if !sealed {
                     Text("Sealed is required for donations. This listing will be treated as Sell.")
                         .font(.footnote)
-                        .foregroundColor(.orange)
-                }
+						.foregroundColor(.appTomato)
+				}
             }
 
             Section {
@@ -94,6 +110,7 @@ struct AddItemView: View {
             }
         }
         .navigationTitle("Add Item")
+		.tint(.appPrimary)
         .sheet(isPresented: $showPhotoPicker) {
             ImagePicker(sourceType: .photoLibrary) { image in
                 if let image { selectedImages.append(image) }
@@ -121,6 +138,7 @@ struct AddItemView: View {
             sealed: sealed,
             expiryDate: expiryDate,
             description: description,
+			photoData: selectedImages.compactMap { $0.jpegData(compressionQuality: 0.8) },
             photoURLs: nil,
             priceUSD: donation ? nil : Double(price),
             locationText: location,
@@ -137,6 +155,8 @@ struct AddItemView: View {
             statusMessage = "Your product was submitted and is pending approval."
         }
         showConfirmation = true
+		restartFormAfterSubmit()
+
     }
 
     private func resetForm() {
@@ -148,5 +168,13 @@ struct AddItemView: View {
         donation = true
         price = ""
         expiryDate = Date()
+		selectedImages = []
+			}
+
+			private func restartFormAfterSubmit() {
+				showPhotoPicker = false
+				showCameraPicker = false
+				resetForm()
+				showConfirmation = true
     }
 }

@@ -29,6 +29,7 @@ struct ContentView: View {
             }
             .tag(TabRouter.Tab.profile)
         }
+		.tint(.appPrimary)
     }
 }
 
