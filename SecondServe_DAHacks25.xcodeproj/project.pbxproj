@@ -28,7 +28,7 @@
 /* Begin PBXFileReference section */
 		33460CBF2ED264D000D5EB74 /* ItemImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemImageView.swift; sourceTree = "<group>"; };
 		33460CC12ED26A4800D5EB74 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
-		338759F92ED1C978000FD729 /* dahackswifttest2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dahackswifttest2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		338759F92ED1C978000FD729 /* SecondServe_DAHacks25.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecondServe_DAHacks25.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33875A002ED1C979000FD729 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33875A072ED1C98C000FD729 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
 		33875A082ED1C98C000FD729 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
@@ -43,8 +43,8 @@
 		33875A112ED1C98C000FD729 /* SecondServeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondServeApp.swift; sourceTree = "<group>"; };
 		33875A122ED1C98C000FD729 /* TabRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabRouter.swift; sourceTree = "<group>"; };
 		33875A132ED1C98C000FD729 /* ViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels.swift; sourceTree = "<group>"; };
-		33875A212ED1C98D000FD729 /* dahackswifttest2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "dahackswifttest2-Bridging-Header.h"; sourceTree = "<group>"; };
-		33875A222ED21A60000FD729 /* dahackswifttest2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "dahackswifttest2-Info.plist"; sourceTree = "<group>"; };
+		33875A212ED1C98D000FD729 /* SecondServe_DAHacks25-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SecondServe_DAHacks25-Bridging-Header.h"; sourceTree = "<group>"; };
+		33875A222ED21A60000FD729 /* SecondServe_DAHacks25-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SecondServe_DAHacks25-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +61,12 @@
 		338759F02ED1C978000FD729 = {
 			isa = PBXGroup;
 			children = (
-				33875A222ED21A60000FD729 /* dahackswifttest2-Info.plist */,
+				33875A222ED21A60000FD729 /* SecondServe_DAHacks25-Info.plist */,
 				33875A072ED1C98C000FD729 /* AddItemView.swift */,
 				33460CC12ED26A4800D5EB74 /* AppColors.swift */,
 				33875A082ED1C98C000FD729 /* CartView.swift */,
 				33875A092ED1C98C000FD729 /* ContentView.swift */,
-				33875A212ED1C98D000FD729 /* dahackswifttest2-Bridging-Header.h */,
+				33875A212ED1C98D000FD729 /* SecondServe_DAHacks25-Bridging-Header.h */,
 				33875A0A2ED1C98C000FD729 /* HomeView.swift */,
 				33875A0B2ED1C98C000FD729 /* ImagePicker.swift */,
 				33875A0C2ED1C98C000FD729 /* ItemDetailView.swift */,
@@ -86,7 +86,7 @@
 		338759FA2ED1C978000FD729 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				338759F92ED1C978000FD729 /* dahackswifttest2.app */,
+				338759F92ED1C978000FD729 /* SecondServe_DAHacks25.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,9 +94,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		338759F82ED1C978000FD729 /* dahackswifttest2 */ = {
+		338759F82ED1C978000FD729 /* SecondServe_DAHacks25 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 33875A042ED1C979000FD729 /* Build configuration list for PBXNativeTarget "dahackswifttest2" */;
+			buildConfigurationList = 33875A042ED1C979000FD729 /* Build configuration list for PBXNativeTarget "SecondServe_DAHacks25" */;
 			buildPhases = (
 				338759F52ED1C978000FD729 /* Sources */,
 				338759F62ED1C978000FD729 /* Frameworks */,
@@ -106,11 +106,11 @@
 			);
 			dependencies = (
 			);
-			name = dahackswifttest2;
+			name = SecondServe_DAHacks25;
 			packageProductDependencies = (
 			);
-			productName = dahackswifttest2;
-			productReference = 338759F92ED1C978000FD729 /* dahackswifttest2.app */;
+			productName = SecondServe_DAHacks25;
+			productReference = 338759F92ED1C978000FD729 /* SecondServe_DAHacks25.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -129,7 +129,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 338759F42ED1C978000FD729 /* Build configuration list for PBXProject "dahackswifttest2" */;
+			buildConfigurationList = 338759F42ED1C978000FD729 /* Build configuration list for PBXProject "SecondServe_DAHacks25" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -143,7 +143,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				338759F82ED1C978000FD729 /* dahackswifttest2 */,
+				338759F82ED1C978000FD729 /* SecondServe_DAHacks25 */,
 			);
 		};
 /* End PBXProject section */
@@ -315,7 +315,7 @@
 				DEVELOPMENT_TEAM = GMX2V77C6K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "dahackswifttest2-Info.plist";
+				INFOPLIST_FILE = "SecondServe_DAHacks25-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Second Serve";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -335,7 +335,7 @@
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "dahackswifttest2-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "SecondServe_DAHacks25-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -355,7 +355,7 @@
 				DEVELOPMENT_TEAM = GMX2V77C6K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "dahackswifttest2-Info.plist";
+				INFOPLIST_FILE = "SecondServe_DAHacks25-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Second Serve";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -376,7 +376,7 @@
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "dahackswifttest2-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "SecondServe_DAHacks25-Bridging-Header.h";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -386,7 +386,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		338759F42ED1C978000FD729 /* Build configuration list for PBXProject "dahackswifttest2" */ = {
+		338759F42ED1C978000FD729 /* Build configuration list for PBXProject "SecondServe_DAHacks25" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				33875A022ED1C979000FD729 /* Debug */,
@@ -395,7 +395,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		33875A042ED1C979000FD729 /* Build configuration list for PBXNativeTarget "dahackswifttest2" */ = {
+		33875A042ED1C979000FD729 /* Build configuration list for PBXNativeTarget "SecondServe_DAHacks25" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				33875A052ED1C979000FD729 /* Debug */,

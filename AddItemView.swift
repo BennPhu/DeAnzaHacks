@@ -35,6 +35,24 @@ struct AddItemView: View {
                 } label: {
                     Label("Choose from library", systemImage: "photo.on.rectangle")
                 }
+                if selectedImages.isEmpty {
+                    // Example of using bundled assets (Assets.xcassets) when no user images are chosen.
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("Example asset preview")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                        Image("PearBanner")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(height: 120)
+                            .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                                    .stroke(Color.primary.opacity(0.08), lineWidth: 1)
+                            )
+                    }
+                    .padding(.vertical, 4)
+                }
                 Button {
                     showCameraPicker = true
                 } label: {
